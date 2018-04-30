@@ -16,12 +16,16 @@ module.exports = function (app) {
 
 
 function findDiff(newFriend) {
+  var diffArray = [];
   var totalDiff = 0;
   var questionDiff = 0;
   for (var i = 0; i < friendData.length; i++) {
-    for (var j = 0; i < friendData[i].scores.length; j++) {
-      questionDiff = parseInt(friendData[i].scores[j]) - parseInt(newFriend.scores[j])
-      totalDiff = totalDiff + questionDiff     
+    for (var j = 0; j < friendData[i].scores.length; j++) {
+      questionDiff = parseInt(friendData[i].scores[j]) - parseInt(newFriend.scores[j]);
+      totalDiff = totalDiff + questionDiff;    
     }   
+    diffArray.push(totalDiff)
+    console.log(diffArray);
   };
+ 
 }
