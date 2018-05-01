@@ -235,8 +235,8 @@
         };
         $.post("/api/friends", userData, function (data) {
 
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
+          $("#match-name").text(data.friendName);
+          $("#match-img").attr("src", data.friendImage);
           $("#results-modal").modal("toggle");
         });
       } else {
