@@ -201,6 +201,7 @@
     }
     $("#submit").on("click", function (event) {
       event.preventDefault();
+
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function () {
@@ -233,7 +234,7 @@
           ]
         };
         $.post("/api/friends", userData, function (data) {
-          
+
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
           $("#results-modal").modal("toggle");
@@ -242,8 +243,6 @@
         alert("Please fill out all fields before submitting!");
       }
     });
-
-
   </script>
 </body>
 

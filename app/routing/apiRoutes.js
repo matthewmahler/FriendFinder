@@ -22,8 +22,8 @@ function findDiff(newFriend) {
   for (var i = 0; i < (friendData.length - 1); i++) {
     for (var j = 0; j < friendData[i].scores.length; j++) {
       questionDiff = parseInt(friendData[i].scores[j]) - parseInt(newFriend.scores[j]);
-      totalDiff = totalDiff + Math.abs(questionDiff);    
-    }   
+      totalDiff = totalDiff + Math.abs(questionDiff);
+    }
     diffArray.push(totalDiff);
     console.log(diffArray);
     totalDiff = 0;
@@ -34,10 +34,10 @@ function findDiff(newFriend) {
 function indexOfSmallest(diffArray) {
   var lowest = 0;
   for (var i = 1; i < diffArray.length; i++) {
-   if (diffArray[i] < diffArray[lowest]) lowest = i;
+    if (diffArray[i] < diffArray[lowest]) lowest = i;
   }
- console.log(lowest);
- }
+  console.log(lowest);
+}
 
- //take the index of lowest, go grab the object at that index 
- //send that info back to the front end 
+//take the index of lowest, go grab the object at that index 
+//send that info back to the front end
